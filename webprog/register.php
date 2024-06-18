@@ -5,7 +5,11 @@ $password = "";
 $dbname = "login_system";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
+//
+//
+/*add new server side dito para dun sa new parameters*/ 
+//
+//
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
