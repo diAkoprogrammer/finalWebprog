@@ -1,0 +1,66 @@
+/* External CSS for media queries and sizing */
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .side-panel {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .side-panel a {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-panel {
+        width: 150px;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .side-panel a {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
+
+/* Default styles for dimensions */
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+#logout {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
