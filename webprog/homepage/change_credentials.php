@@ -10,6 +10,9 @@ $username = "root";
 $password = "";
 $dbname = "login_system";
 
+
+/*will edit this pag hihiwalayin yung form para less error kung sakale*/
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -30,7 +33,7 @@ if (!empty($new_username)) {
     $types .= "s";
 }
 if (!empty($new_password)) {
-    $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+    $hashed_password = md5($new_password, PASSWORD_DEFAULT);
     $update_query .= "password = ?, ";
     $params[] = $hashed_password;
     $types .= "s";
@@ -49,7 +52,7 @@ if (!empty($params)) {
         if (!empty($new_username)) {
             $_SESSION['username'] = $new_username;
         }
-        echo "<script type='text/javascript'>alert('Credentials updated successfully.'); window.location.href = 'home.php';</script>";
+        echo "<script type='text/javascript'>window.location.href = 'home.php';</script>";
     } else {
         echo "Failed to update credentials.";
     }
