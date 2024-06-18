@@ -26,6 +26,10 @@
     color: aliceblue;
     margin-top: 5vh;
    }
+   p{
+    color: orangered;
+    font-family: Arial, sans-serif;
+   }
 
 </style>
 
@@ -35,6 +39,25 @@
     <h2>Register</h2>
     
     <form action="register.php" method="post">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="FirstN" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="LastN" name="lastName" required><br><br>
+        <label for="middleN">Middle Name:</label><br>
+        <input type="text" id="MiddleN" name="middleName" ><br><br>
+        <label for="occupation">Occupation:</label>
+        <select id="occupation" name="occupation" required>
+          <option value="instructor">Instructor</option>
+          <option value="student">Student</option>
+        </select>
+        <p>Select regular if you are a Instructor:*</p>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+          <option value="regular">Regular</option>
+          <option value="iregular">Iregular</option>
+        </select>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label><br>
